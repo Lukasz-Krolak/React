@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Hero.scss';
+import PropTypes from 'prop-types';
 
 
 class Hero extends React.Component {
@@ -13,4 +14,8 @@ class Hero extends React.Component {
   }
 }
 
+Hero.propTypes = {
+  titleText: PropTypes.node.isRequired,
+  imageHero: PropTypes.node.isRequired,
+};
 export default Hero;
