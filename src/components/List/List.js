@@ -2,10 +2,11 @@ import React from 'react';
 import styles from './List.scss';
 import Hero from '../Hero/Hero.js';
 import PropTypes from 'prop-types';
+import Column from '../Column/Column.js';
 
 class List extends React.Component {
   static propTypes = {
-    title: PropTypes.node.isRequired,
+    title: PropTypes.array.isRequired,
     children: PropTypes.node.isRequired,
   }
   static defaultProps = {
@@ -14,10 +15,14 @@ class List extends React.Component {
   render() {
     return (
       <section className={styles.component}>
-        <Hero titleText={this.props.title} />
-        <Hero imageHero={this.props.image} />
+        <Hero titleText={this.props.title} imageHero="http://uploads.kodilla.com/bootcamp/fer/11.react/space.png" />
         <div className={styles.description}>
           {this.props.children}
+        </div>
+        <div className={styles.columns}>
+          <Column/>
+          <h3>GOT</h3>
+            
         </div>
       </section>
     )
