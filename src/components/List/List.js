@@ -20,9 +20,9 @@ class List extends React.Component {
           {this.props.children}
         </div>
         <div className={styles.columns}>
-          <Column/>
-          <h3>GOT</h3>
-            
+          <Column titleColumn={'Animals'}/>
+          <Column titleColumn={'Planets'}/>
+          <Column titleColumn={'Minerals'}/>
         </div>
       </section>
     )

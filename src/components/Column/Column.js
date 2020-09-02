@@ -5,7 +5,7 @@ import List from '../List/List.js';
 
 class Column extends React.Component {
   static propTypes = {
-    title: PropTypes.string.isRequired,
+    titleColumn: PropTypes.string.isRequired,
   }
   render() {
     return (
@@ -16,4 +16,4 @@ class Column extends React.Component {
   }
 }
 
-export default List;
+export default Column;
