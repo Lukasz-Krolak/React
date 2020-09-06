@@ -14,7 +14,7 @@ class List extends React.Component {
   render() {
     return (
       <section className={styles.component}>
-        <Hero titleText={this.props.title} imageHero="http://uploads.kodilla.com/bootcamp/fer/11.react/space.png" />
+        <Hero titleText={this.props.title} imageHero={this.props.image} />
         <div className={styles.description}>
           {this.props.children}
         </div>
