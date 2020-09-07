@@ -11,9 +11,10 @@ class List extends React.Component {
     columns: this.props.columns || [],
   }
   static propTypes = {
-    title: PropTypes.array.isRequired,
-    description: PropTypes.node,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string,
     columns: PropTypes.array,
+    image: PropTypes.string,
   }
   static defaultProps = {
     description: settings.defaultListDescription,
