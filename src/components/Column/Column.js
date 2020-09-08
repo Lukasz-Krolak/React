@@ -6,7 +6,7 @@ import Icon from '../Icon/Icon';
 class Column extends React.Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
-    Icon: PropTypes.string,
+    icon: PropTypes.string,
   }
   state = {
     cards: this.props.cards,
@@ -14,7 +14,12 @@ class Column extends React.Component {
   render() {
     return (
       <section className={styles.component}>
-        <h3 className={styles.title}>{this.props.title}<span icon={styles.icon}>{this.props.Icon}</span></h3>
+        <h3 className={styles.title}>{this.props.title}
+          <span className={styles.icon}>
+            <Icon>{this.props.icon}
+            </Icon>
+          </span>
+        </h3>
       </section>
     )
   }
