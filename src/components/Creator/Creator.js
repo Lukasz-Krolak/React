@@ -36,12 +36,12 @@ class Creator extends React.Component {
   }
 
   handleCancel = () => {
-    this.setState({
-      value: '',
-      visibleButtons: false
-    });
     if (window.confirm("Do you really want to leave?")) { 
-      window.open("exit.html", "Thanks for Visiting!");
+      window.open("index.html", "Thanks for Visiting!");
+      this.setState({
+        value: '',
+        visibleButtons: false
+      });
     }
   }
   
@@ -58,7 +58,7 @@ class Creator extends React.Component {
         />
         <div className={styles.buttons + (this.state.visibleButtons ? ' ' + styles.buttonsShown : '')}>
           <Button onClick={this.handleOK}>OK</Button>
-          <Button onClick={this.handleCancel} variant='window.confirm(message)'>cancel</Button>
+          <Button onClick={this.handleCancel} variant='danger'>cancel</Button>
         </div>
       </div>
     );

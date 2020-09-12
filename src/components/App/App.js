@@ -21,7 +21,7 @@ class App extends React.Component {
         lists: [
           ...state.lists,
           {
-            key: state.lists.length ? state.lists[state.lists.length-1].key+1 : 0,
+            key: state.lists.length ? state.listData[state.lists.length-1].key+1 : 0,
             title,
             list: []
           }
@@ -35,7 +35,7 @@ class App extends React.Component {
         <h1 className={styles.title}>{pageContents.title}</h1>
         <h2 className={styles.subtitle}>{pageContents.subtitle}</h2>
         <List {...listData} />
-        <div className={styles.list}>
+        <div className={styles.lists}>
         {this.state.lists.map(({key, ...listProps}) => (
           <List key={key} {...listProps} />
           ))}
