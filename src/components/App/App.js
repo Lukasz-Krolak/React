@@ -4,7 +4,7 @@ import List from '../List/List.js';
 import {pageContents, listData} from '../../data/dataStore';
 import {settings} from '../../data/dataStore';
 import Creator from '../Creator/Creator.js';
-import PropTypes, { array } from 'prop-types';
+import PropTypes from 'prop-types';
 
 
 class App extends React.Component {
@@ -23,9 +23,9 @@ class App extends React.Component {
           {
             key: state.lists.length ? state.listData[state.lists.length-1].key+1 : 0,
             title,
-            list: []
-          }
-        ]
+            list: [],
+          },
+        ],
       }
     ));
   }
@@ -36,15 +36,15 @@ class App extends React.Component {
         <h2 className={styles.subtitle}>{pageContents.subtitle}</h2>
         <List {...listData} />
         <div className={styles.lists}>
-        {this.state.lists.map(({key, ...listProps}) => (
-          <List key={key} {...listProps} />
+          {this.state.lists.map(({key, ...listProps}) => (
+            <List key={key} {...listProps} />
           ))}
         </div>
         <div className={styles.creator}>
           <Creator text={settings.listCreatorText} action={title => this.addLists(title)}/>
         </div>
       </main>
-    )
+    );
   }
 }
 

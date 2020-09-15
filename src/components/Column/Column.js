@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Column.scss';
-import PropTypes, { array } from 'prop-types';
+import PropTypes from 'prop-types';
 import Icon from '../Icon/Icon.js';
 import Card from '../Card/Card.js';
 import Creator from '../Creator/Creator.js';
@@ -23,9 +23,9 @@ class Column extends React.Component {
           {
             key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
             title,
-            card: []
-          }
-        ]
+            card: [],
+          },
+        ],
       }
     ));
   }
@@ -39,15 +39,15 @@ class Column extends React.Component {
           </span>
         </h3>
         <div className={styles.cards}>
-        {this.state.cards.map(({key, ...cardProps}) => (
-          <Card key={key} {...cardProps} />
+          {this.state.cards.map(({key, ...cardProps}) => (
+            <Card key={key} {...cardProps} />
           ))}
         </div>
         <div className={styles.creator}>
           <Creator text={settings.cardCreatorText} action={title => this.addCards(title)}/>
         </div>
       </section>
-    )
+    );
   }
 }
 
