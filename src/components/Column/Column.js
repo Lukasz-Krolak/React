@@ -3,7 +3,7 @@ import styles from './Column.scss';
 import PropTypes from 'prop-types';
 import Icon from '../Icon/Icon.js';
 import Card from '../Card/Card.js';
-// import Creator from '../Creator/Creator.js';
+import Creator from '../Creator/Creator.js';
 import {settings} from '../../data/dataStore';
 
 class Column extends React.Component {
@@ -48,9 +48,9 @@ class Column extends React.Component {
             <Card key={cardData.id} {...cardData} />
           ))}
         </div>
-        {/* <div className={styles.creator}>
+        <div className={styles.creator}>
           <Creator text={settings.cardCreatorText} action={title => this.addCards(title)}/>
-        </div> */}
+        </div>
       </section>
     );
   }
