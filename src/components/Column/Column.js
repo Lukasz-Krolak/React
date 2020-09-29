@@ -7,9 +7,7 @@ import Creator from '../Creator/Creator.js';
 import {settings} from '../../data/dataStore';
 
 class Column extends React.Component {
-  state = {
-    cards: this.props.cards || [],
-  };
+
   static propTypes = {
     title: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
@@ -18,23 +16,9 @@ class Column extends React.Component {
   static defaultProps = {
     icon: settings.defaultColumnIcon,
   }
-  // addCards(title) {
-  //   this.setState(state => (
-  //     {
-  //       cards: [
-  //         ...state.cards,
-  //         {
-  //           key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
-  //           title,
-  //           card: [],
-  //         },
-  //       ],
-  //     }
-  //   ));
-  // }
+
   render() {
-    const {title, icon} = this.props;
-    const {cards} = this.state;
+    const {title, icon, cards} = this.props;
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>
