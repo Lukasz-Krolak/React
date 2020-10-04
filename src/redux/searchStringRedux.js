@@ -1,3 +1,4 @@
+//import { string } from 'prop-types';
 
 // selectors
 export const getSearchString = ({searchString}) => searchString;
@@ -18,12 +19,12 @@ export const CHANGE_SEARCH = createActionName('CHANGE_SEARCH');
 export const createAction_changeSearchString = payload => ({ payload, type: CHANGE_SEARCH });
 
 // reducer
-export default function reducer(state = '', action = {}) {
+export default function reducer(statePart = '', action = {}) {
   switch (action.type) {
     case CHANGE_SEARCH:
-      return [action.payload];
+      return action.payload;
     default:
-      return state;
+      return statePart;
   }
 }
 
