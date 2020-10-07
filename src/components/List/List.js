@@ -6,11 +6,9 @@ import ReactHtmlParser from 'react-html-parser';
 import Column from '../Column/ColumnContainer.js';
 import {settings} from '../../data/dataStore';
 import Creator from '../Creator/Creator.js';
+import Container from '../Container/Container.js';
 
 class List extends React.Component {
-  // state = {
-  //   columns: this.props.columns || [],
-  // }
   static propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
@@ -21,25 +19,11 @@ class List extends React.Component {
   static defaultProps = {
     description: settings.defaultListDescription,
   }
-  // addColumn(title){
-  //   this.setState(state => (
-  //     {
-  //       columns: [
-  //         ...state.columns,
-  //         {
-  //           key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
-  //           title,
-  //           icon: 'list-alt',
-  //           cards: [],
-  //         },
-  //       ],
-  //     }
-  //   ));
-  // }
   render() {
     const {title, image, description, columns, addColumn} = this.props;
     return (
       <section className={styles.component}>
+        <Container/>
         <Hero titleText={title} imageHero={image} />
         <div className={styles.description}>
           {ReactHtmlParser(description)}
