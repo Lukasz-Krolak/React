@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './App.scss';
+import styles from './Container.scss';
 
 class Container extends React.Component {
 
@@ -9,11 +9,11 @@ class Container extends React.Component {
     }
 
     render() {
-      const { Children } = require('react');
+      const { children } = this.props;
       return(
         <main>
           <div className={styles.component}>
-            <Children></Children>
+            {children}
 
           </div>
         </main>
