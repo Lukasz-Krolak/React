@@ -2,6 +2,9 @@ export const settings = {
   columnCreatorText: 'Add new column',
   cardCreatorText: 'Add new card',
   listCreatorText: 'Add new list',
+  header: {
+    icon: 'dog',
+  },
   creator: {
     buttonOK: 'OK',
     buttonCancel: 'Cancel',
@@ -140,6 +143,7 @@ const cards = [
     title: 'Skyrim',
   },
 ];
+
 
 const initialStoreData = {
   app: {...pageContents},
