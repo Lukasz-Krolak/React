@@ -1,30 +1,31 @@
 import React from 'react';
 import styles from './Faq.scss';
 import Container from '../Container/Container';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import Hero from '../Hero/Hero.js';
+import {pageContents} from '../data/dataStore.js';
 
 class Faq extends React.Component {
 
-    static propTypes = {
-      title: PropTypes.node,
-      imageHero: PropTypes.string,
+    static pageContents = {
+      title: pageContents.node,
+      image: pageContents.string,
     }
 
     render() {
-      //const { title} = this.props;
+      const { title, image } = this.pageContents;
       return (
-        <Faq className={styles.component}>
+        <section className={styles.component}>
           <Container>
             <div className={styles.wrapper}>
-              <Hero>
-                <h1>ddjdfgjfdhhfd</h1>
-                <img src='https://pixabay.com/images/id-931706/'/>
+              <Hero titleText={title} imageHero={image}>
+                <h1>{title}</h1>
+                <img src={image}/>
               </Hero>
               <p>Lorem ipsum</p>
             </div>
           </Container>
-        </Faq>
+        </section>
       );
     }
 }
