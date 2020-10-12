@@ -1,13 +1,13 @@
 import React from 'react';
-import Container from '../Container/Container';
+import Container from '../Container/Container.js';
 import Hero from '../Hero/Hero.js';
-import {infoContent} from '../../data/dataStore';
-//import PropTypes from 'prop-types';
+import {infoContent} from '../../data/dataStore.js';
+
 
 
 class Info extends React.Component {
     static infoContent = {
-      title: infoContent.string.isRequired,
+      title: infoContent.string,
       image: infoContent.string,
       text: infoContent.string,
 

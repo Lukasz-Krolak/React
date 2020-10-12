@@ -4,7 +4,7 @@ import Hero from '../Hero/Hero.js';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import Column from '../Column/ColumnContainer.js';
-import {settings} from '../../data/dataStore';
+import {settings} from '../../data/dataStore.js';
 import Creator from '../Creator/Creator.js';
 import Container from '../Container/Container.js';
 

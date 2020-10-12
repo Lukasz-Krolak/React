@@ -1,8 +1,8 @@
 import React from 'react';
-import Container from '../Container/Container';
+import Container from '../Container/Container.js';
 //import PropTypes from 'prop-types';
 import Hero from '../Hero/Hero.js';
-import {faqContent} from '../../data/dataStore';
+import {faqContent} from '../../data/dataStore.js';
 
 class Faq extends React.Component {
 
