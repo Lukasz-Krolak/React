@@ -1,18 +1,18 @@
 import React from 'react';
 import Container from '../Container/Container.js';
-//import PropTypes from 'prop-types';
 import Hero from '../Hero/Hero.js';
-import {faqContent} from '../../data/dataStore.js';
+import { faqContent } from '../../data/dataStore.js';
 
 class Faq extends React.Component {
 
     static faqContent = {
       title: faqContent.node,
       image: faqContent.string,
+      text: faqContent.string,
     }
 
     render() {
-      const { title, image, text } = faqContent;
+      const { title, image } = faqContent;
       return (
         <section>
           <Container>
@@ -20,9 +20,15 @@ class Faq extends React.Component {
               <Hero titleText={title} imageHero={image}>
                 <h1>{title}</h1>
                 <img src={image}/>
-                <h3>{text}</h3>
               </Hero>
-              <p>Lorem ipsum</p>
+              <p>PIES DINGO Pies nie pies
+                    Pies, mówią, że pies
+                    Nerwowy jak pies - dingo
+                    Prawie że lis
+                    A rudy jak lew - dingo
+                    Dziwny to pies
+                    A może to jest
+                    Lord Mayor George Eleven - yes!</p>
             </div>
           </Container>
         </section>
