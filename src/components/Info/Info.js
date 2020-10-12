@@ -9,11 +9,11 @@ class Info extends React.Component {
     static infoContent = {
       title: infoContent.string.isRequired,
       image: infoContent.string,
-      text: infoContent,
+      text: infoContent.string,
 
     }
     render() {
-      const {title, image, text} = this.infoContents;
+      const {title, image, text} = infoContent;
       return (
         <Container>
           <h2>Info</h2>
