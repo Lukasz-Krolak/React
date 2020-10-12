@@ -3,17 +3,17 @@ import styles from './Faq.scss';
 import Container from '../Container/Container';
 //import PropTypes from 'prop-types';
 import Hero from '../Hero/Hero.js';
-import {pageContents} from '../data/dataStore.js';
+import {faqContent} from '../../data/dataStore';
 
 class Faq extends React.Component {
 
-    static pageContents = {
-      title: pageContents.node,
-      image: pageContents.string,
+    static faqContent = {
+      title: faqContent.node,
+      image: faqContent.string,
     }
 
     render() {
-      const { title, image } = this.pageContents;
+      const { title, image, text } = this.faqContent;
       return (
         <section className={styles.component}>
           <Container>
@@ -21,6 +21,7 @@ class Faq extends React.Component {
               <Hero titleText={title} imageHero={image}>
                 <h1>{title}</h1>
                 <img src={image}/>
+                <h3>{text}</h3>
               </Hero>
               <p>Lorem ipsum</p>
             </div>

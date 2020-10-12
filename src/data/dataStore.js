@@ -21,15 +21,18 @@ export const settings = {
 export const pageContents = {
   title: 'My first React app',
   subtitle: 'A simple to-do app, with lists, columns and cards',
-  faq: {
-    title: 'tytuł',
-    image: 'https://cdn.pixabay.com/photo/2015/09/09/16/05/forest-931706_960_720.jpg',
-  },
-  info: {
-    title: 'to jest mygła',
-    image: 'https://cdn.pixabay.com/photo/2014/05/03/00/09/wood-336547_960_720.jpg',
-  },
 };
+export const faqContent = {
+  title: 'tytuł',
+  image: 'https://cdn.pixabay.com/photo/2015/09/09/16/05/forest-931706_960_720.jpg',
+  text: 'Lorem ipsum',
+};
+export const  infoContent = {
+  title: 'to jest mygła',
+  image: 'https://cdn.pixabay.com/photo/2014/05/03/00/09/wood-336547_960_720.jpg',
+  text: 'Lorem ipsum',
+};
+
 
 export const listData = {
   title: 'Things to do <sup>soon!</sup>',
