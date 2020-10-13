@@ -93,6 +93,18 @@ const lists = [
     description: 'Interesting things I want to check out!',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
+  {
+    id: 'list-2',
+    title: 'Napis <sup>testoowy!</sup>',
+    description: 'Testujący się napis, napisany celem testowania!',
+    image: 'https://cdn.pixabay.com/photo/2018/09/25/17/33/tree-3702711_960_720.jpg',
+  },
+  {
+    id: 'list-3',
+    title: 'Napis <sup>testoowy!</sup>',
+    description: 'Napisany test-tekst, testowany celem napisania!',
+    image: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg',
+  },
 ];
 
 const columns = [
