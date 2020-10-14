@@ -14,6 +14,7 @@ class Search extends React.Component {
     changeSearchString: PropTypes.func,
     countVisible: PropTypes.number,
     countAll: PropTypes.number,
+    history: PropTypes.object,
 
   }
 
@@ -33,8 +34,7 @@ class Search extends React.Component {
   }
 
   handleOK(){
-    this.props.changeSearchString(this.state.value);
-    //this.props.history.push(`/search/${this.state.value}`);
+    this.props.history.push(`/search/${this.state.value}`);
   }
 
   componentDidUpdate(prevProps){
