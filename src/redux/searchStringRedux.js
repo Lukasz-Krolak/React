@@ -1,11 +1,10 @@
-//import { string } from 'prop-types';
-
 // selectors
 export const getSearchString = ({searchString}) => searchString;
+
 // action name creator
-//export const createAction_changeSearchString = 'CHANGE';
 const reducerName = 'CHANGE_SEARCH';
 const createActionName = name => `app/${reducerName}/${name}`;
+
 // search cards
 export const countAllCards = ({cards}) => cards.length;
 
