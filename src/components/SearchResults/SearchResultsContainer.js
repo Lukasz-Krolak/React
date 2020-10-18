@@ -1,22 +1,18 @@
 import {connect} from 'react-redux';
-import Search from './Search';
+//import Search from './Search';
 import {
-  getSearchString,
-  countVisibleCards,
-  countAllCards,
-  cardsResults,
   createAction_changeSearchString, //- wg tresci tu powinien być creator createActionName
 } from '../../redux/searchStringRedux';
+// eslint-disable-next-line no-unused-vars
+import {getCardsFromAllList} from '../../redux/cardsRedux.js';
+import SearchResults from './SearchResults';
 
-const mapStateToProps = (state) => ({
-  searchString: getSearchString(state),
-  countVisible: countVisibleCards(state),
-  countAll: countAllCards(state),
-  cardsResults: cardsResults(state),
+const mapStateToProps = (state, props) => ({
+  cardsResults: getCardsFromAllList(state, props.match),
 });
 
 const mapDispatchToProps = (dispatch) => ({
   changeSearchString: newSearchString => dispatch(createAction_changeSearchString(newSearchString)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchResults);

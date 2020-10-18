@@ -4,7 +4,6 @@ import {
   getSearchString,
   countVisibleCards,
   countAllCards,
-  
   createAction_changeSearchString, //- wg tresci tu powinien być creator createActionName
 } from '../../redux/searchStringRedux';
 
