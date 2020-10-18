@@ -12,8 +12,8 @@ class SearchResults extends React.Component {
       return (
         <section className={styles.component}>
           <div className={styles.cards}>
-            {cards.map(cardData => (
-              <Card key={cardData.id} {...cardData} />
+            {cards.map(cardsResults => (
+              <Card key={cardsResults.id} {...cardsResults} />
             ))}
           </div>
         </section>
