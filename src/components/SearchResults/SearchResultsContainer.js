@@ -7,12 +7,23 @@ import {
 import {getCardsFromAllList} from '../../redux/cardsRedux.js';
 import SearchResults from './SearchResults';
 
-const mapStateToProps = (state, props) => ({
-  cardsResults: getCardsFromAllList(state, props.match),
-});
-
+const mapStateToProps = (state, props) => {
+  const searchText = props.match.params.searchText;
+  console.log('searchText',searchText);
+  const filteredSearchResults = state.SearchResults.filter(searchResults => searchResults.searchText == searchText);
+  console.log('filteredSearchResults',filteredSearchResults);
+  const searchResultsParams = filteredSearchResults[0] || {};
+  return {
+    ...searchResultsParams,
+    cards: getCardsFromAllList(state, searchText),
+    
+  };
+  
+};
 const mapDispatchToProps = (dispatch) => ({
-  changeSearchString: newSearchString => dispatch(createAction_changeSearchString(newSearchString)),
+  changeSearchString: newSearchString => dispatch(createAction_changeSearchString(
+    newSearchString
+  )),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchResults);
